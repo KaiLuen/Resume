@@ -1,0 +1,16 @@
+//取得POST Form query data
+https://stackoverflow.com/questions/5710358/how-to-access-post-form-fields-in-express
+
+$ npm install --save body-parser
+var bodyParser = require('body-parser')
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
+
+
+//Mongo DB
+https://www.w3schools.com/nodejs/nodejs_mongodb.asp
+
+
+

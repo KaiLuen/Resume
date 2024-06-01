@@ -1,0 +1,26 @@
+{
+  "name": "chatbot-app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "swagger": "node ./swagger.js"
+  },
+  "dependencies": {
+    "@line/bot-sdk": "^9.2.0",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv-extended": "^2.9.0",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "http-errors": "~1.6.3",
+    "mongodb": "^6.5.0",
+    "morgan": "~1.9.1",
+    "pg": "^8.11.5",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.0",
+    "uuid": "^9.0.1"
+  }
+}

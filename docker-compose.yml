@@ -1,0 +1,12 @@
+version: '1'
+services:
+  resume-demo-app-2024-2:
+    container_name: resume-demo-app-2024-2
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    restart: always
+    volumes:
+      - "C:/Users/username/Desktop/Resume-Demo-App-2024-2:/app"

@@ -1,0 +1,734 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Resume API",
+    "description": "輸入你的個人資料，我們會幫您儲存，日後產生履歷文件時，就可以直接使用囉！",
+    "version": "1.0.0"
+  },
+  "host": "jumimi-chatbot-app-12e234121890.herokuapp.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/resume/profile": {
+      "get": {
+        "tags": [
+          "Resume"
+        ],
+        "description": "取得使用者已儲存的個人資料",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "number",
+                  "example": 0
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Success"
+                },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "profile": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "example": "金楷倫"
+                        },
+                        "birth": {
+                          "type": "string",
+                          "example": "1988-02-13"
+                        }
+                      }
+                    },
+                    "educations": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "degree": {
+                            "type": "string",
+                            "example": "High School Diploma"
+                          },
+                          "school": {
+                            "type": "string",
+                            "example": "Los Angeles High School"
+                          },
+                          "yearStart": {
+                            "type": "string",
+                            "example": "2011"
+                          },
+                          "yearEnd": {
+                            "type": "string",
+                            "example": "2015"
+                          }
+                        }
+                      }
+                    },
+                    "experiences": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "title": {
+                            "type": "string",
+                            "example": "Software Engineer Intern"
+                          },
+                          "company": {
+                            "type": "string",
+                            "example": "Facebook"
+                          },
+                          "yearStart": {
+                            "type": "string",
+                            "example": "2018"
+                          },
+                          "yearEnd": {
+                            "type": "string",
+                            "example": "2018"
+                          },
+                          "description": {
+                            "type": "string",
+                            "example": "Developed and maintained software applications for Facebook's social media platform."
+                          }
+                        }
+                      }
+                    },
+                    "skills": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string",
+                            "example": "Python"
+                          },
+                          "level": {
+                            "type": "string",
+                            "example": "Intermediate"
+                          }
+                        }
+                      }
+                    },
+                    "projects": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string",
+                            "example": "Project 2"
+                          },
+                          "yearStart": {
+                            "type": "string",
+                            "example": "2018"
+                          },
+                          "yearEnd": {
+                            "type": "string",
+                            "example": "2018"
+                          },
+                          "description": {
+                            "type": "string",
+                            "example": "Developed a mobile application using React Native."
+                          }
+                        }
+                      }
+                    },
+                    "certifications": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string",
+                            "example": "Certification 2"
+                          },
+                          "skillLevel": {
+                            "type": "number",
+                            "example": 3
+                          }
+                        }
+                      }
+                    },
+                    "languages": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string",
+                            "example": "Spanish"
+                          },
+                          "level": {
+                            "type": "number",
+                            "example": 3
+                          }
+                        }
+                      }
+                    },
+                    "interests": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string",
+                            "example": "Reading"
+                          },
+                          "description": {
+                            "type": "string",
+                            "example": "I enjoy reading books on various topics."
+                          }
+                        }
+                      }
+                    },
+                    "references": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string",
+                            "example": "Reference 1"
+                          },
+                          "title": {
+                            "type": "string",
+                            "example": "Manager"
+                          },
+                          "company": {
+                            "type": "string",
+                            "example": "Company 1"
+                          },
+                          "email": {
+                            "type": "string",
+                            "example": ""
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Resume"
+        ],
+        "description": "儲存使用者個人資料",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "使用者個人資料",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "金楷倫"
+                },
+                "birth": {
+                  "type": "string",
+                  "example": "1988-02-13"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "number",
+                  "example": 0
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Success"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/resume/education": {
+      "post": {
+        "tags": [
+          "Resume"
+        ],
+        "description": "儲存使用者教育資料",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "使用者教育資料",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "degree": {
+                    "type": "string",
+                    "example": "High School Diploma"
+                  },
+                  "school": {
+                    "type": "string",
+                    "example": "Los Angeles High School"
+                  },
+                  "yearStart": {
+                    "type": "string",
+                    "example": "2011"
+                  },
+                  "yearEnd": {
+                    "type": "string",
+                    "example": "2015"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "number",
+                  "example": 0
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Success"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/resume/experience": {
+      "post": {
+        "tags": [
+          "Resume"
+        ],
+        "description": "儲存使用者工作經驗",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "使用者工作經驗",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "example": "Software Engineer Intern"
+                  },
+                  "company": {
+                    "type": "string",
+                    "example": "Facebook"
+                  },
+                  "yearStart": {
+                    "type": "string",
+                    "example": "2018"
+                  },
+                  "yearEnd": {
+                    "type": "string",
+                    "example": "2018"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "Developed and maintained software applications for Facebook social media platform."
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "number",
+                  "example": 0
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Success"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/resume/skill": {
+      "post": {
+        "tags": [
+          "Resume"
+        ],
+        "description": "儲存使用者專業技能",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "使用者專業技能",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "Python"
+                  },
+                  "level": {
+                    "type": "string",
+                    "example": "Intermediate"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "number",
+                  "example": 0
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Success"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/resume/project": {
+      "post": {
+        "tags": [
+          "Resume"
+        ],
+        "description": "儲存使用者專案經驗",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "使用者專案經驗",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "Project 2"
+                  },
+                  "yearStart": {
+                    "type": "string",
+                    "example": "2018"
+                  },
+                  "yearEnd": {
+                    "type": "string",
+                    "example": "2018"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "Developed a mobile application using React Native."
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "number",
+                  "example": 0
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Success"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/resume/certification": {
+      "post": {
+        "tags": [
+          "Resume"
+        ],
+        "description": "儲存使用者證照資料",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "使用者證照資料",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "Certification 2"
+                  },
+                  "skillLevel": {
+                    "type": "number",
+                    "example": 3
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "number",
+                  "example": 0
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Success"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/resume/language": {
+      "post": {
+        "tags": [
+          "Resume"
+        ],
+        "description": "儲存使用者語言能力",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "使用者語言能力",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "Spanish"
+                  },
+                  "level": {
+                    "type": "number",
+                    "example": 3
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "number",
+                  "example": 0
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Success"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/resume/interest": {
+      "post": {
+        "tags": [
+          "Resume"
+        ],
+        "description": "儲存使用者興趣",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "使用者興趣",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "Reading"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "I enjoy reading books on various topics."
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "number",
+                  "example": 0
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Success"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/resume/reference": {
+      "post": {
+        "tags": [
+          "Resume"
+        ],
+        "description": "儲存使用者推薦人",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "使用者推薦人",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "Reference 1"
+                  },
+                  "title": {
+                    "type": "string",
+                    "example": "Manager"
+                  },
+                  "company": {
+                    "type": "string",
+                    "example": "Company 1"
+                  },
+                  "email": {
+                    "type": "string",
+                    "example": ""
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "number",
+                  "example": 0
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Success"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

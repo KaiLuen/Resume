@@ -1,0 +1,159 @@
+#profile, education, experience, skill, project, certification, language, interest, reference
+
+profile:
+  name: "John Doe"
+  title: "Software Engineer"
+  email: ""
+
+
+education:
+  - degree: "Bachelor of Science in Computer Science"
+    school: "University of California, Los Angeles"
+    yearStart: "2015"
+    yearEnd: "2019"
+
+  - degree: "High School Diploma"
+    school: "Los Angeles High School"
+    yearStart: "2011"
+    yearEnd: "2015"
+
+experience:
+  - title: "Software Engineer"
+    company: "Google"
+    yearStart: "2019"
+    yearEnd: "Present"
+    description: "Developed and maintained software applications for Google's search engine."
+
+  - title: "Software Engineer Intern"
+    company: "Facebook"
+    yearStart: "2018"
+    yearEnd: "2018"
+    description: "Developed and maintained software applications for Facebook's social media platform."
+
+skill:
+  - name: "Java"
+    level: "Advanced"
+
+  - name: "Python"
+    level: "Intermediate"
+
+  - name: "JavaScript"
+    level: "Intermediate"
+
+  - name: "C++"
+    level: "Intermediate"
+
+  - name: "SQL"
+    level: "Intermediate"
+
+  - name: "HTML"
+    level: "Intermediate"
+
+  - name: "CSS"
+    level: "Intermediate"
+
+  - name: "React"
+    level: "Intermediate"
+
+  - name: "Angular"
+    level: "Intermediate"
+
+  - name: "Node.js"
+    level: "Intermediate"
+
+
+project:
+  - name: "Project 1"
+    yearStart: "2019"
+    yearEnd: "2019"
+    description: "Developed a web application using React and Node.js."
+
+  - name: "Project 2"
+    yearStart: "2018"
+    yearEnd: "2018"
+    description: "Developed a mobile application using React Native."
+
+  - name: "Project 3"
+    yearStart: "2017"
+    yearEnd: "2017"
+    description: "Developed a desktop application using Electron."
+
+  - name: "Project 4"
+    yearStart: "2016"
+    yearEnd: "2016"
+    description: "Developed a game using Unity."
+
+  - name: "Project 5"
+    yearStart: "2015"
+    yearEnd: "2015"
+    description: "Developed a website using HTML and CSS."
+
+
+
+certification:
+  - name: "Certification 1"
+    skillLevel: 3
+
+  - name: "Certification 2"
+    skillLevel: 3
+
+  - name: "Certification 3"
+    skillLevel: 3
+
+
+language:
+  - name: "English"
+    level: 5
+
+  - name: "Spanish"
+    level: 3
+
+
+interest:
+  - name: "Reading"
+    description: "I enjoy reading books on various topics."
+
+  - name: "Traveling"
+    description: "I love exploring new places and experiencing different cultures."
+
+  - name: "Photography"
+    description: "I enjoy capturing moments and telling stories through photography."
+
+  - name: "Cooking"
+    description: "I love experimenting with new recipes and creating delicious meals."
+
+  - name: "Hiking"
+    description: "I enjoy spending time outdoors and exploring nature on hikes."
+
+  - name: "Gaming"
+    description: "I love playing video games and exploring virtual worlds."
+
+  - name: "Music"
+    description: "I enjoy listening to music and attending concerts and music festivals."
+
+  - name: "Fitness"
+    description: "I enjoy staying active and working out to maintain a healthy lifestyle."
+
+
+reference:
+  - name: "Reference 1"
+    title: "Manager"
+    company: "Company 1"
+    email: ""
+
+  - name: "Reference 2"
+    title: "Supervisor"
+    company: "Company 2"
+    email: ""
+
+  - name: "Reference 3"
+    title: "Colleague"
+    company: "Company 3"
+    email: ""
+
+
+
+    
+
+
+
